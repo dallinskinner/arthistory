@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+			{% for artwork in artworks %}
+				
+				<div class="artwork timeline">
+					<h2>{{ artwork.year }}</h2>
+					<img class="image" src="/{{ artwork.image.url }}" />
+					<div class="info">
+						<h3>{{ artwork.title}}</h3>
+						<h4>{{ artwork.artist }}</h4>
+						<h5>{{ artwork.category }}</h5>
+					</div>
+				</div>
+			{% endfor %}
+{% endblock %}

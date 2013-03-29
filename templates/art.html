@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for artwork in artworks %}
+	<div class="artwork">
+		<img class="image" src="{{ artwork.image.url }}" />
+		<div class="info">
+			<h2>{{ artwork.title}}</h2>
+			<h3>{{ artwork.artist }}</h3>
+			<h4>{{ artwork.category }}</h4>
+			<h5>{{ artwork.year }}</h5>
+		</div>
+	</div>
+{% endfor %}
+{% endblock %}
